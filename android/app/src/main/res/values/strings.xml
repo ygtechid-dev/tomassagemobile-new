@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToMassage Mitra App</string>
+    <string name="notification_icon_description">Order notification</string>
+    <string name="order_notification_title">Order Baru!</string>
+    <string name="order_notification_content">Ada pesanan baru untuk Anda</string>
+    <string name="overlay_permission_required">Izin overlay diperlukan untuk menampilkan notifikasi order</string>
+</resources>

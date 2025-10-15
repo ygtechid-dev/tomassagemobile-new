@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Base application theme -->
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent_color</item>
+        <item name="android:windowBackground">@color/background_white</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+    </style>
+
+    <!-- Overlay text styles -->
+    <style name="OverlayTitleText">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="OverlayLabelText">
+        <item name="android:textSize">@dimen/label_text_size</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="OverlayInfoText">
+        <item name="android:textSize">@dimen/label_text_size</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <style name="CountdownText">
+        <item name="android:textSize">@dimen/countdown_text_size</item>
+        <item name="android:textColor">@color/background_white</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="AcceptButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:background">@drawable/accept_button_bg</item>
+        <item name="android:textColor">@color/background_white</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="RejectButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/reject_red</item>
+        <item name="android:textSize">@dimen/label_text_size</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+</resources>

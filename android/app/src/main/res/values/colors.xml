@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#2B8E87</color>
+    <color name="primary_dark">#14A49C</color>
+    <color name="accent_color">#4CAF50</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#666666</color>
+    <color name="border_gray">#E0E0E0</color>
+    <color name="countdown_red">#FF0000</color>
+    <color name="reject_red">#FF0000</color>
+</resources>

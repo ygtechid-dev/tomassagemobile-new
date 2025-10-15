@@ -1,0 +1,143 @@
+# ============================================================
+# 🚀 REACT NATIVE CLI PROJECT
+# ============================================================
+
+# Node modules & logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment & secrets
+.env
+.env.*.local
+*.key
+*.keystore
+google-services.json
+GoogleService-Info.plist
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs & editors
+.vscode/
+.idea/
+*.iml
+
+# Metro & React Native
+.expo/
+.expo-shared/
+.expo-cli/
+.expo-dev/
+.expo/settings.json
+.expo/packager-info.json
+.expo/manifest-cache/
+.expo/notifications/
+.expo/updates/
+.expo/startup/
+.expo/state.json
+.expo-cli.json
+.expo-shared/assets.json
+.expo-shared/node_modules/
+.expo-shared/.cache/
+.expo-shared/.expo/
+.expo-shared/.expo-settings/
+.expo-shared/.expo-cache/
+.expo-shared/.expo-logs/
+.expo-shared/.expo-logs-cache/
+.expo-shared/.expo-shared-cache/
+.expo-shared/.expo-metro-cache/
+
+# Metro Bundler cache
+.metro/
+.cache/
+*.tmp
+
+# Babel
+babel.config.js
+*.babelrc
+
+# ============================================================
+# ⚙️ ANDROID
+# ============================================================
+android/.gradle/
+android/app/build/
+android/build/
+android/.idea/
+android/local.properties
+android/app/debug.keystore
+android/app/release/
+android/.cxx/
+android/.externalNativeBuild/
+android/gradle.properties.bak
+android/gradlew.bat
+android/gradlew
+android/gradle/
+android/.signing/
+*.apk
+*.aab
+
+# ============================================================
+# 🍏 IOS
+# ============================================================
+ios/build/
+ios/Pods/
+ios/DerivedData/
+ios/*.xcworkspace
+ios/*.xcodeproj/project.xcworkspace/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcuserdatad/
+ios/.bundle/
+ios/*.pbxuser
+ios/*.mode1v3
+ios/*.mode2v3
+ios/.swiftpm/
+ios/Podfile.lock
+ios/.idea/
+
+# ============================================================
+# 🧩 MISC
+# ============================================================
+coverage/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+*.log
+*.lock
+*.tmp
+*.bak
+*.orig
+
+# Watchman & Hermes
+.watchmanconfig
+hermes-engine/
+*.hbc
+
+# ============================================================
+# 💥 TEMPORARY BUILDS / OUTPUTS
+# ============================================================
+build/
+dist/
+output/
+tmp/
+temp/
+logs/
+.bundle/
+npm-debug.log*
+yarn.lock
+package-lock.json
+
+# ============================================================
+# 🧠 ADDITIONAL (OPTIONAL)
+# ============================================================
+# If you use VSCode React Native Tools
+.vscode/.react/
+
+# JetBrains IDEs cache
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
