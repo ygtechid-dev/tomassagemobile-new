@@ -312,8 +312,8 @@ const OrderSummary = ({ route, navigation }) => {
       });
 
       if (response.data.success) {
-        // Deduct platform fee (20%)
-        const platformFee = booking.harga_service * 0.2;
+        // Deduct platform fee (25%)
+        const platformFee = booking.harga_service * 0.25;
         
         try {
           await axios.patch(`${API_URL}/mitra/${mitraId}/balance`, {
@@ -422,7 +422,7 @@ const OrderSummary = ({ route, navigation }) => {
   };
 
   const calculateMitraEarnings = (servicePrice) => {
-    return servicePrice * 0.8;
+    return servicePrice * 0.75;
   };
 
   const getStatusDisplay = (status) => {
@@ -668,9 +668,9 @@ const OrderSummary = ({ route, navigation }) => {
           {booking.status === 'Completed' && (
             <>
               <View style={styles.detailRow}>
-                <Text style={styles.commissionLabel}>Potongan Platform (20%)</Text>
+                <Text style={styles.commissionLabel}>Potongan Platform (25%)</Text>
                 <Text style={styles.commissionValue}>
-                  - {formatPrice((booking.harga_service || 0) * 0.2)}
+                  - {formatPrice((booking.harga_service || 0) * 0.25)}
                 </Text>
               </View>
 

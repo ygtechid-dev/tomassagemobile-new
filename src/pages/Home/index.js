@@ -568,12 +568,37 @@ const getCurrentLocation = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (userData && locationCoords?.latitude && locationCoords?.longitude) {
-      initializeNativeModule();
-      getServiceStatus();
+ useEffect(() => {
+  const autoStartBackgroundService = async () => {
+    if (
+      userData &&
+      locationCoords?.latitude &&
+      locationCoords?.longitude &&
+      EnhancedBackgroundOrderModule
+    ) {
+      await initializeNativeModule();
+      await getServiceStatus();
+
+      // ✅ Otomatis nyalakan service kalau belum aktif
+      const status = await EnhancedBackgroundOrderModule.getServiceStatus();
+      if (!status.isRunning) {
+        console.log('🔄 Auto-start background service...');
+        try {
+          await EnhancedBackgroundOrderModule.startBackgroundService();
+          setBackgroundServiceActive(true);
+          if (Platform.OS === 'android') {
+            ToastAndroid.show('Layanan background otomatis aktif ✅', ToastAndroid.SHORT);
+          }
+        } catch (err) {
+          console.error('❌ Auto-start failed:', err);
+        }
+      }
     }
-  }, [userData, locationCoords]);
+  };
+
+  autoStartBackgroundService();
+}, [userData, locationCoords]);
+
 
   useEffect(() => {
     const handleAppStateChange = (nextAppState) => {
@@ -640,7 +665,7 @@ const getCurrentLocation = () => {
               <View style={styles.sparkle}>
                 <Text style={styles.sparkleText}>✨</Text>
               </View>
-              <Text style={styles.appVersionText}>APLIKASI VERSI TERBARU v2.1</Text>
+              <Text style={styles.appVersionText}>APLIKASI VERSI TERBARU v2.3</Text>
               <View style={styles.sparkle}>
                 <Text style={styles.sparkleText}>✨</Text>
               </View>
@@ -689,7 +714,7 @@ const getCurrentLocation = () => {
           </View>
 
           {/* Background Service Status */}
-          <View style={styles.serviceContainer}>
+          {/* <View style={styles.serviceContainer}>
             <View style={styles.serviceHeader}>
               <View style={styles.serviceInfo}>
                 <Icon 
@@ -721,7 +746,7 @@ const getCurrentLocation = () => {
             >
               {backgroundServiceActive ? 'Berhenti' : 'Mulai Bekerja'}
             </Button>
-          </View>
+          </View> */}
 
           {/* TEST OVERLAY SECTION */}
           <View style={styles.testSection}>

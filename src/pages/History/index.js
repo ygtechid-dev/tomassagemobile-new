@@ -100,9 +100,9 @@ const History = ({navigation}) => {
     fetchBookings();
   };
 
-  // Calculate mitra earnings (80% of service price)
+  // Calculate mitra earnings (75% of service price)
   const calculateMitraEarnings = (servicePrice) => {
-    return servicePrice * 0.8;
+    return servicePrice * 0.75;
   };
 
   // Format price
@@ -298,9 +298,9 @@ const History = ({navigation}) => {
               {booking.status === 'Completed' && (
                 <>
                   <View style={styles.priceBreakdown}>
-                    <Text style={styles.commissionLabel}>Potongan Platform (20%):</Text>
+                    <Text style={styles.commissionLabel}>Potongan Platform (25%):</Text>
                     <Text style={styles.commissionValue}>
-                      - {formatPrice((booking.harga_service || 0) * 0.2)}
+                      - {formatPrice((booking.harga_service || 0) * 0.25)}
                     </Text>
                   </View>
                   
